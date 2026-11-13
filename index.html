@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sève — un thème, une ambiance pour votre local | STRAKARA</title>
+  <meta name="description" content="Voyez votre local avant de dépenser. Visuels de projection, matériaux, budget chiffré et artisans locaux. Premiers visuels sous 15 jours, projet complet sous un mois. Premier échange gratuit.">
+  <link rel="canonical" href="https://seve.strakara.fr/">
+  <meta property="og:title" content="Aménagement : votre projet en une page | STRAKARA">
+  <meta property="og:description" content="Vos photos, et sous 72 h : visuels de projection, budget et artisans locaux.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    :root{
+      --brand:#1E1F23;
+      --gold:#C8A96A;
+      --gold-dark:#A8894A;
+      --gold-light:#D4B97A;
+      --light:#F6F5F0;
+      --text:#1E1F23;
+      --muted:#6E7175;
+      --border:#E8E0D0;
+      --white:#FFFFFF;
+      --green:#2A7A5A;
+      --green-light:#EAF5EF;
+      --red:#C0392B;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html,
+    body{
+      overflow-x:hidden;
+    }
+
+    body{
+      font-family:'Outfit',sans-serif;
+      font-size:16px;
+      color:var(--text);
+      line-height:1.65;
+      background:#fff;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    .label{
+      display:inline-block;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--gold-dark);
+      margin-bottom:14px;
+    }
+
+    .btn-gold{
+      display:inline-block;
+      background:var(--gold);
+      color:#1E1F23;
+      padding:13px 28px;
+      font-weight:600;
+      font-size:14px;
+      text-decoration:none;
+      transition:.2s;
+    }
+
+    .btn-gold:hover{
+      background:var(--gold-light);
+    }
+
+    .btn-outline-white{
+      display:inline-block;
+      background:transparent;
+      color:#fff;
+      padding:12px 28px;
+      font-weight:500;
+      font-size:14px;
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,.35);
+    }
+
+    .btn-outline-white:hover{
+      border-color:#fff;
+    }
+
+
+    /* =========================
+       BANDEAU
+    ========================= */
+
+    .sk-banner{
+      background:#1a1a18;
+      padding:9px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      position:sticky;
+      top:0;
+      z-index:2000;
+    }
+
+    .sk-banner__text{
+      font-family:'Playfair Display',serif;
+      font-style:italic;
+      font-size:13px;
+      color:#c9a84c;
+    }
+
+    .sk-banner__btn{
+      background:#c9a84c;
+      color:#1a1a18;
+      font-size:11.5px;
+      font-weight:700;
+      padding:5px 14px;
+      border-radius:20px;
+      text-decoration:none;
+    }
+
+    .sk-banner__close{
+      position:absolute;
+      right:16px;
+      background:none;
+      border:none;
+      color:#777;
+      font-size:18px;
+      cursor:pointer;
+    }
+
+    .sk-banner.sk-hidden{
+      display:none;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .sk-nav{
+      background:#fff;
+      border-bottom:1px solid #e5e2da;
+      padding:0 24px;
+      display:flex;
+      align-items:center;
+      height:58px;
+      position:sticky;
+      top:40px;
+      z-index:1000;
+    }
+
+    .sk-nav__logo{
+      font-family:'Playfair Display',serif;
+      font-size:15px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:#1a1a18;
+      text-decoration:none;
+      margin-right:36px;
+      white-space:nowrap;
+    }
+
+    .sk-nav__logo span{
+      color:#c9a84c;
+    }
+
+    .sk-nav__links{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      flex:1;
+      list-style:none;
+    }
+
+    .sk-nav__links a{
+      font-size:13px;
+      color:#4a4845;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .sk-nav__links a:hover{
+      color:#1a1a18;
+    }
+
+    .sk-nav__right{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-left:auto;
+    }
+
+    .sk-nav__phone{
+      font-size:12.5px;
+      color:#4a4845;
+      text-decoration:none;
+    }
+
+    .sk-btn-espace{
+      background:#1a1a18;
+      color:#fff;
+      font-size:12px;
+      font-weight:500;
+      padding:7px 16px;
+      border-radius:20px;
+      text-decoration:none;
+    }
+
+    .sk-nav__hamburger{
+      display:none;
+      background:none;
+      border:none;
+      cursor:pointer;
+      flex-direction:column;
+      gap:5px;
+      margin-left:auto;
+    }
+
+    .sk-nav__hamburger span{
+      display:block;
+      width:22px;
+      height:1.5px;
+      background:#1a1a18;
+    }
+
+    .sk-nav__mobile{
+      display:none;
+      flex-direction:column;
+      background:#fff;
+      border-bottom:1px solid #e5e2da;
+      padding:16px 24px;
+      position:sticky;
+      top:98px;
+      z-index:999;
+    }
+
+    .sk-nav__mobile.sk-open{
+      display:flex;
+    }
+
+    .sk-nav__mobile a{
+      font-size:14px;
+      color:#4a4845;
+      text-decoration:none;
+      padding:10px 0;
+      border-bottom:1px solid #e5e2da;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      background:var(--brand);
+      color:#fff;
+      padding:64px 48px 56px;
+      border-bottom:2px solid var(--gold);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 79px,
+          rgba(200,169,106,.04) 79px,
+          rgba(200,169,106,.04) 80px
+        );
+    }
+
+    .hero-inner{
+      max-width:1280px;
+      margin:0 auto;
+      position:relative;
+    }
+
+    .hero-eyebrow{
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--gold);
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:44px;
+      font-weight:400;
+      line-height:1.15;
+      margin-bottom:14px;
+    }
+
+    .hero h1 em{
+      font-style:italic;
+      color:var(--gold);
+    }
+
+    .hero .sub{
+      font-size:16px;
+      color:rgba(255,255,255,.65);
+      font-weight:300;
+      max-width:720px;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .main-wrap{
+      max-width:1280px;
+      margin:0 auto;
+      padding:48px 48px 72px;
+    }
+
+
+    /* =========================
+       SCORE
+    ========================= */
+
+    .score-bar{
+      background:var(--light);
+      border:1px solid var(--border);
+      padding:28px 32px;
+      margin-bottom:40px;
+      display:flex;
+      align-items:center;
+      gap:32px;
+      flex-wrap:wrap;
+    }
+
+    .score-left{
+      flex:1;
+      min-width:200px;
+    }
+
+    .score-title{
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+
+    .score-nums{
+      display:flex;
+      align-items:baseline;
+      gap:4px;
+      margin-bottom:12px;
+    }
+
+    .score-num{
+      font-family:'Playfair Display',serif;
+      font-size:48px;
+      font-weight:600;
+      line-height:1;
+    }
+
+    .score-total{
+      font-size:18px;
+      color:var(--muted);
+    }
+
+    .score-msg{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .score-right{
+      flex:2;
+      min-width:240px;
+    }
+
+    .progress{
+      background:var(--border);
+      height:6px;
+      overflow:hidden;
+      margin-bottom:8px;
+    }
+
+    .progress-fill{
+      background:var(--green);
+      height:100%;
+      transition:width .4s ease;
+    }
+
+    .progress-pct{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+
+    /* =========================
+       CATÉGORIES
+    ========================= */
+
+    .cat-label{
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--gold-dark);
+      margin-top:40px;
+      margin-bottom:16px;
+      padding-bottom:8px;
+      border-bottom:1px solid var(--border);
+      display:block;
+    }
+
+    .checklist{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .check-item{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+      padding:18px 20px;
+      border:1px solid var(--border);
+      background:#fff;
+      cursor:pointer;
+      transition:.15s;
+      user-select:none;
+    }
+
+    .check-item:hover{
+      border-color:var(--gold);
+      background:var(--light);
+    }
+
+    .check-item.checked{
+      border-color:var(--green);
+      background:var(--green-light);
+    }
+
+    .check-box{
+      width:22px;
+      height:22px;
+      border:1.5px solid var(--border);
+      flex-shrink:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:1px;
+    }
+
+    .check-item.checked .check-box{
+      background:var(--green);
+      border-color:var(--green);
+    }
+
+    .check-box-tick{
+      width:10px;
+      height:8px;
+      opacity:0;
+    }
+
+    .check-box-tick path{
+      stroke:#fff;
+      stroke-width:2;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .check-item.checked .check-box-tick{
+      opacity:1;
+    }
+
+    .check-content h3{
+      font-size:15px;
+      font-weight:500;
+      color:var(--text);
+      margin-bottom:4px;
+      line-height:1.4;
+    }
+
+    .check-item.checked .check-content h3{
+      color:var(--green);
+    }
+
+    .check-content p{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.55;
+    }
+
+    .check-content a{
+      color:var(--gold-dark);
+      font-weight:500;
+    }
+
+    .check-tag{
+      display:inline-block;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:2px 8px;
+      margin-top:6px;
+    }
+
+    .tag-required{
+      background:#FEF0EE;
+      color:var(--red);
+    }
+
+    .tag-warn{
+      background:#FEF9EC;
+      color:#8B6500;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section{
+      background:var(--brand);
+      padding:48px;
+      margin-top:48px;
+    }
+
+    .cta-inner{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:48px;
+      align-items:center;
+    }
+
+    .cta-section .label{
+      color:var(--gold);
+    }
+
+    .cta-section h2{
+      font-family:'Playfair Display',serif;
+      font-size:32px;
+      font-weight:400;
+      color:#fff;
+      line-height:1.2;
+      margin-bottom:10px;
+    }
+
+    .cta-section h2 em{
+      color:var(--gold);
+    }
+
+    .cta-section p{
+      font-size:15px;
+      color:rgba(255,255,255,.6);
+    }
+
+    .cta-btns{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-width:220px;
+    }
+
+    .cta-note{
+      font-size:12px;
+      color:rgba(255,255,255,.4);
+      text-align:center;
+    }
+
+
+    /* =========================
+       PARCOURS
+    ========================= */
+
+    .tunnel{
+      background:var(--light);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      padding:36px 48px;
+    }
+
+    .tunnel-inner{
+      max-width:1280px;
+      margin:0 auto;
+    }
+
+    .tunnel-title{
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--muted);
+      text-align:center;
+      margin-bottom:24px;
+    }
+
+    .tunnel-steps{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .tunnel-step{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:14px 18px;
+      text-decoration:none;
+      flex:1;
+      min-width:140px;
+      max-width:220px;
+    }
+
+    .tunnel-step:hover{
+      border-color:var(--gold);
+    }
+
+    .tunnel-step-cta{
+      background:var(--brand);
+      border-color:var(--brand);
+    }
+
+    .ts-num{
+      width:30px;
+      height:30px;
+      background:var(--brand);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:600;
+      font-size:13px;
+      flex-shrink:0;
+    }
+
+    .tunnel-step-cta .ts-num{
+      background:var(--gold);
+      color:#1E1F23;
+    }
+
+    .ts-label{
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:var(--gold-dark);
+    }
+
+    .ts-desc{
+      font-size:13px;
+      color:var(--text);
+      line-height:1.35;
+      margin-top:2px;
+    }
+
+    .ts-sub{
+      font-size:11px;
+      color:var(--muted);
+    }
+
+    .tunnel-step-cta .ts-label{
+      color:var(--gold);
+    }
+
+    .tunnel-step-cta .ts-desc{
+      color:#fff;
+    }
+
+    .tunnel-step-cta .ts-sub{
+      color:rgba(255,255,255,.5);
+    }
+
+    .tunnel-arrow{
+      color:var(--gold);
+      font-size:18px;
+      font-weight:bold;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer{
+      background:#111214;
+      padding:56px 0 32px;
+    }
+
+    .footer-inner{
+      max-width:1280px;
+      margin:0 auto 48px;
+      padding:0 48px;
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:48px;
+    }
+
+    .footer-logo{
+      font-family:'Playfair Display',serif;
+      font-size:20px;
+      color:#fff;
+      display:block;
+      margin-bottom:14px;
+      text-decoration:none;
+    }
+
+    .footer-brand p{
+      font-size:13px;
+      color:rgba(255,255,255,.35);
+      line-height:1.7;
+      max-width:280px;
+    }
+
+    .footer-col h4{
+      font-size:11px;
+      color:rgba(255,255,255,.5);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-bottom:16px;
+    }
+
+    .footer-col a{
+      display:block;
+      font-size:13px;
+      color:rgba(255,255,255,.35);
+      text-decoration:none;
+      margin-bottom:10px;
+    }
+
+    .footer-col a:hover{
+      color:var(--gold);
+    }
+
+    .footer-bottom{
+      max-width:1280px;
+      margin:0 auto;
+      padding:24px 48px 0;
+      border-top:1px solid rgba(255,255,255,.06);
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .footer-bottom p,
+    .footer-bottom a{
+      font-size:12px;
+      color:rgba(255,255,255,.25);
+      text-decoration:none;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:960px){
+
+      .sk-nav__links,
+      .sk-nav__right{
+        display:none;
+      }
+
+      .sk-nav__hamburger{
+        display:flex;
+      }
+
+      .cta-inner{
+        grid-template-columns:1fr;
+      }
+
+      .footer-inner{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .hero{
+        padding:48px 20px;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+
+      .main-wrap{
+        padding:32px 20px 56px;
+      }
+
+      .score-bar{
+        padding:20px;
+      }
+
+      .cta-section{
+        padding:36px 20px;
+      }
+
+      .tunnel{
+        padding:32px 20px;
+      }
+
+      .tunnel-steps{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .tunnel-step{
+        max-width:none;
+      }
+
+      .tunnel-arrow{
+        transform:rotate(90deg);
+        align-self:center;
+      }
+
+      .footer-inner{
+        grid-template-columns:1fr;
+        padding:0 20px;
+      }
+
+      .footer-bottom{
+        padding:24px 20px 0;
+        flex-direction:column;
+      }
+    }
+
+  </style>
+
+<style>
+  .pg-hero{background:var(--brand);color:#fff;padding:72px 24px 56px;text-align:center}
+  .pg-hero .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .pg-hero h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(32px,5vw,52px);line-height:1.15;margin:14px auto 16px;max-width:820px}
+  .pg-hero h1 em{color:var(--gold);font-style:italic}
+  .pg-hero p{color:rgba(255,255,255,.75);max-width:680px;margin:0 auto;font-size:17px;line-height:1.7}
+  .pg-switch{display:inline-flex;gap:6px;background:rgba(255,255,255,.08);padding:6px;border-radius:999px;margin-top:28px}
+  .pg-switch a{color:rgba(255,255,255,.75);text-decoration:none;padding:10px 20px;border-radius:999px;font-weight:600;font-size:14px}
+  .pg-switch a.on{background:var(--gold);color:var(--brand)}
+  .pg-actions{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .pg-btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;font-size:15px}
+  .pg-btn.gold{background:var(--gold);color:var(--brand)}
+  .pg-btn.line{border:1px solid rgba(255,255,255,.35);color:#fff}
+  .pg-btn.dark{background:var(--brand);color:#fff}
+  .pg-btn.outline{border:1px solid var(--border);color:var(--brand);background:#fff}
+  .pg-wrap{max-width:1140px;margin:0 auto;padding:56px 24px 24px}
+  .pg-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:56px}
+  .pg-summary a{display:block;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.35}
+  .pg-summary a span{display:block;color:var(--gold-dark);font-size:12px;letter-spacing:.08em;margin-bottom:4px}
+  .pg-step{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start;padding:44px 0;border-top:1px solid var(--border)}
+  .pg-step:first-of-type{border-top:0}
+  .pg-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--brand);color:var(--gold);font-weight:700;font-size:16px}
+  .pg-who{display:inline-block;margin-left:10px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--light);color:var(--muted);vertical-align:middle}
+  .pg-who.you{background:#FBF5E8;color:var(--gold-dark)}
+  .pg-who.sk{background:var(--green-light);color:var(--green)}
+  .pg-step h2{font-family:'Playfair Display',serif;font-weight:600;font-size:26px;line-height:1.25;margin:16px 0 12px}
+  .pg-step p{color:var(--muted);line-height:1.75;font-size:16px;margin-bottom:10px}
+  .pg-step ul{margin:6px 0 10px 18px;color:var(--muted);line-height:1.8;font-size:15.5px}
+  .pg-step .tip{background:#FBF5E8;border-left:3px solid var(--gold);padding:12px 14px;border-radius:0 8px 8px 0;font-size:14.5px;color:var(--text);line-height:1.6;margin-top:12px}
+  .pg-shot{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(30,31,35,.35)}
+  .pg-shot .bar{display:flex;gap:6px;align-items:center;padding:10px 14px;background:var(--light);border-bottom:1px solid var(--border)}
+  .pg-shot .bar i{width:9px;height:9px;border-radius:50%;background:#ddd6c8;display:block}
+  .pg-shot .bar span{margin-left:10px;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pg-shot img{display:block;width:100%;height:auto}
+  .pg-shot.narrow{max-width:430px}
+  .pg-shot.mid{max-width:560px}
+  .pg-shot + .pg-shot{margin-top:16px}
+  .pg-note{font-size:13px;color:var(--muted);text-align:center;margin:8px 0 0}
+  .pg-end{background:var(--light);border:1px solid var(--border);border-radius:16px;padding:36px 28px;text-align:center;margin:40px 0 64px}
+  .pg-end h2{font-family:'Playfair Display',serif;font-weight:600;font-size:28px;margin-bottom:10px}
+  .pg-end p{color:var(--muted);margin-bottom:20px;line-height:1.7}
+  .pg-end .pg-actions{margin-top:0}
+  @media (max-width:860px){
+    .pg-step{grid-template-columns:1fr;gap:20px;padding:34px 0}
+    .pg-shot.narrow,.pg-shot.mid{max-width:100%}
+    .pg-hero{padding:56px 18px 44px}
+  }
+  @media print{
+    .sk-banner,.sk-nav,.sk-nav__mobile,.footer,.pg-switch,.pg-actions,.pg-summary,.pg-end .pg-actions,#crisp-chatbox,.crisp-client{display:none!important}
+    .pg-hero{padding:24px 0 18px;background:#fff;color:var(--brand)}
+    .pg-hero p{color:var(--muted)}
+    .pg-wrap{padding:10px 0}
+    .pg-step{break-inside:avoid;page-break-inside:avoid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:22px 0}
+    .pg-shot{box-shadow:none}
+    .pg-shot.narrow img{max-height:150mm;object-fit:contain;object-position:top}
+    .pg-end{margin:10px 0;break-inside:avoid}
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d4a0482a-04b0-4a56-88c3-c01bf484a83a" data-domains="www.strakara.fr"></script>
+<script src="/assets/js/suivi.js" defer></script>
+<script src="/assets/js/crisp.js" defer></script>
+<link rel="stylesheet" href="/assets/css/tunnel.css">
+
+<style>
+  :root{--sv-ivoire:#FBF8F3;--sv-sable:#EFE7DB;--sv-encre:#1F1D1A;--sv-terre:#B07A4F;--sv-doux:#7A736A;--sv-vert:#3E4A33;--sv-vert-clair:#AFB89A}
+  body{background:var(--sv-ivoire)}
+  .sv{font-family:'Outfit',sans-serif;color:var(--sv-encre)}
+  .sv h1,.sv h2,.sv h3,.sv .num{font-family:'Playfair Display',serif;font-weight:400}
+  .sv-wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .sv-kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--sv-terre);font-weight:600;font-family:'Outfit',sans-serif}
+
+  .sv-hero{position:relative;min-height:74vh;display:flex;align-items:center;background:url('/assets/amenagement/seve-accroche.jpg') center/cover no-repeat}
+  .sv-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,243,.95) 0%,rgba(251,248,243,.9) 32%,rgba(251,248,243,.6) 56%,rgba(251,248,243,0) 84%)}
+  .sv-hero .sv-wrap{position:relative;z-index:1;width:100%}
+  .sv-hero-in{max-width:540px;padding:70px 0}
+  .sv-hero h1{font-size:clamp(42px,6vw,74px);line-height:1.04;letter-spacing:-.02em;margin:16px 0 20px}
+  .sv-hero h1 em{font-style:italic;color:var(--sv-terre)}
+  .sv-hero p{font-size:18px;line-height:1.75;color:var(--sv-doux);max-width:430px;margin-bottom:30px}
+
+  .sv-btn{display:inline-block;padding:15px 30px;border-radius:2px;text-decoration:none;font-size:14px;letter-spacing:.06em;font-weight:500;transition:opacity .2s}
+  .sv-btn:hover{opacity:.82}
+  .sv-btn--plein{background:var(--sv-encre);color:var(--sv-ivoire)}
+  .sv-btn--ligne{border:1px solid rgba(31,29,26,.26);color:var(--sv-encre);margin-left:10px}
+
+  .sv-sec{padding:96px 0}
+  .sv-sec--sable{background:var(--sv-sable)}
+  .sv-tete{max-width:620px;margin-bottom:52px}
+  .sv-tete h2{font-size:clamp(30px,3.6vw,44px);line-height:1.14;letter-spacing:-.015em;margin:14px 0 16px}
+  .sv-tete p{font-size:17px;line-height:1.8;color:var(--sv-doux)}
+
+  .sv-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .sv-th{text-decoration:none;color:inherit;display:block}
+  .sv-th figure{margin:0;overflow:hidden;background:var(--sv-sable)}
+  .sv-th img{display:block;width:100%;height:auto;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+  .sv-th:hover img{transform:scale(1.035)}
+  .sv-th h3{font-size:25px;margin:20px 0 7px;letter-spacing:-.01em}
+  .sv-th .sv-mat{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sv-terre);font-weight:600;margin-bottom:9px}
+  .sv-th p{font-size:15px;line-height:1.75;color:var(--sv-doux);margin:0}
+
+  .sv-duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .sv-duo img{display:block;width:100%;height:auto}
+  .sv-duo--large{grid-template-columns:1fr}
+
+  .sv-regles{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+  .sv-regle{display:flex;gap:20px;padding:24px 0;border-top:1px solid rgba(31,29,26,.1)}
+  .sv-regle .num{font-size:19px;color:var(--sv-terre);min-width:28px}
+  .sv-regle p{margin:0;font-size:16px;line-height:1.7}
+
+  .sv-etapes{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+  .sv-etape{border-top:1px solid rgba(31,29,26,.2);padding-top:22px;position:relative}
+  .sv-etape::before{content:'';position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--sv-terre)}
+  .sv-etape .num{display:block;font-family:'Playfair Display',serif;font-size:25px;color:var(--sv-terre);margin-bottom:9px;line-height:1}
+  .sv-etape strong{display:block;font-size:15.5px;font-weight:600;margin-bottom:6px;letter-spacing:-.005em}
+  .sv-etape p{margin:0;font-size:13.5px;line-height:1.7;color:var(--sv-doux)}
+
+  .sv-prix{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+  .sv-carte{background:var(--sv-ivoire);border:1px solid rgba(31,29,26,.12);padding:36px 30px;display:flex;flex-direction:column}
+  .sv-carte h3{font-size:24px;margin-bottom:6px}
+  .sv-carte .sv-pour{font-size:14px;color:var(--sv-doux);margin-bottom:26px;line-height:1.6;flex:1}
+  .sv-carte .sv-barre{font-size:15px;color:var(--sv-doux);text-decoration:line-through}
+  .sv-carte .sv-mt{font-family:'Playfair Display',serif;font-size:42px;line-height:1;margin:4px 0 4px}
+  .sv-carte .sv-ht{font-size:13px;color:var(--sv-doux);letter-spacing:.04em}
+  .sv-carte--phare{background:var(--sv-encre);color:var(--sv-ivoire);border-color:var(--sv-encre)}
+  .sv-carte--phare .sv-pour,.sv-carte--phare .sv-ht,.sv-carte--phare .sv-barre{color:rgba(251,248,243,.62)}
+  .sv-lancement{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sv-terre);font-weight:600;margin-bottom:14px}
+  .sv-options{margin-top:30px;font-size:15px;color:var(--sv-doux);line-height:1.9}
+
+  .sv-cadre{border:1px solid rgba(31,29,26,.14);padding:34px;max-width:780px}
+  .sv-cadre h3{font-size:21px;margin-bottom:14px}
+  .sv-cadre p{font-size:15px;line-height:1.8;color:var(--sv-doux);margin:0 0 10px}
+  .sv-cadre p:last-child{margin:0}
+  .sv-cadre--pdf{padding:0;border:none;background:var(--sv-sable)}
+  .sv-cadre--pdf figure{margin:0;overflow:hidden;aspect-ratio:4/3;background:var(--sv-sable)}
+  .sv-cadre--pdf figure img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 12%}
+  .sv-cadre--pdf h3{margin:28px 30px 14px}
+  .sv-cadre--pdf p{margin:0 30px 10px}
+  .sv-cadre--pdf p:last-child{margin:0 30px 30px}
+
+    .sv-fin{text-align:center;padding:104px 0;background:var(--sv-vert);color:var(--sv-ivoire)}
+  .sv-fin .sv-kicker{color:var(--sv-vert-clair)}
+  .sv-fin .sv-btn--plein{background:var(--sv-ivoire);color:var(--sv-encre)}
+  .sv-fin .sv-btn--ligne{border-color:rgba(251,248,243,.45);color:var(--sv-ivoire)}
+  .sv-fin h2{font-size:clamp(32px,4.4vw,52px);line-height:1.12;margin-bottom:16px}
+  .sv-fin p{font-size:17px;color:rgba(251,248,243,.76);max-width:520px;margin:0 auto 32px;line-height:1.75}
+  .sv-mention{font-size:13px;color:var(--sv-doux);line-height:1.7;margin-top:34px}
+
+
+  .sv-resume{font-size:14px;color:var(--sv-doux);margin-top:18px;letter-spacing:.01em}
+  .sv-miroir{display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px}
+  .sv-mir{padding:26px 0;border-top:1px solid rgba(31,29,26,.14)}
+  .sv-mir strong{display:block;font-family:'Playfair Display',serif;font-size:21px;font-weight:400;line-height:1.3;margin-bottom:10px}
+  .sv-mir p{margin:0;font-size:15px;line-height:1.75;color:var(--sv-doux)}
+  .sv-pivot{margin-top:52px;max-width:720px;font-family:'Playfair Display',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.4;letter-spacing:-.01em}
+  .sv-pivot em{font-style:italic;color:var(--sv-terre)}
+
+  .sv-buds{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .sv-bud{border:1px solid rgba(31,29,26,.14);padding:32px 28px;display:flex;flex-direction:column;background:var(--sv-ivoire)}
+  .sv-bud figure{margin:-32px -28px 24px;overflow:hidden;background:var(--sv-sable);aspect-ratio:1/1}
+  .sv-bud figure img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 56%;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+  .sv-bud:hover figure img{transform:scale(1.04)}
+  .sv-bud h3{font-size:23px;margin-bottom:4px}
+  .sv-bud .sv-m2{font-family:'Playfair Display',serif;font-size:38px;line-height:1;margin:16px 0 2px}
+  .sv-bud .sv-m2 span{font-size:16px;font-family:'Outfit',sans-serif;color:var(--sv-doux)}
+  .sv-bud .sv-ex{font-size:13px;color:var(--sv-terre);letter-spacing:.04em;font-weight:600;margin-bottom:20px}
+  .sv-bud ul{list-style:none;padding:0;margin:0;flex:1}
+  .sv-bud li{font-size:14px;line-height:1.6;color:var(--sv-doux);padding-left:16px;position:relative;margin-bottom:8px}
+  .sv-bud li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--sv-terre)}
+  .sv-bud--haut{background:var(--sv-sable)}
+
+  .sv-livre{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+  .sv-liste{list-style:none;padding:0;margin:0}
+  .sv-liste li{padding:17px 0 17px 34px;border-top:1px solid rgba(31,29,26,.12);font-size:16px;line-height:1.65;position:relative}
+  .sv-liste li::before{content:'—';position:absolute;left:0;top:17px;color:var(--sv-terre)}
+  .sv-liste li strong{font-weight:600}
+
+  .sv-gar{max-width:780px;border:1px solid var(--sv-terre);padding:44px 40px}
+  .sv-gar .sv-kicker{margin-bottom:14px}
+  .sv-gar h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.2vw,38px);line-height:1.18;letter-spacing:-.015em;margin-bottom:18px}
+  .sv-gar p{font-size:16px;line-height:1.8;color:var(--sv-doux);margin:0 0 12px}
+  .sv-gar p:last-child{margin:0}
+  .sv-gar .sv-ast{margin-top:22px;padding-top:16px;border-top:1px solid rgba(31,29,26,.16);font-size:12.5px;line-height:1.75}
+
+  .sv-compare{margin-top:34px;padding-top:26px;border-top:1px solid rgba(31,29,26,.14);font-size:15px;line-height:1.85;color:var(--sv-doux);max-width:780px}
+  .sv-compare strong{color:var(--sv-encre)}
+
+  .sv-faq{max-width:840px}
+  .sv-q{border-top:1px solid rgba(31,29,26,.14)}
+  .sv-q summary{cursor:pointer;padding:22px 0;font-size:17px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+  .sv-q summary::-webkit-details-marker{display:none}
+  .sv-q summary::after{content:'+';color:var(--sv-terre);font-size:21px;line-height:1;flex-shrink:0}
+  .sv-q[open] summary::after{content:'\2013'}
+  .sv-q p{margin:0 0 22px;font-size:15px;line-height:1.85;color:var(--sv-doux);max-width:680px}
+
+
+  .sv-form{max-width:780px;margin-top:8px}
+  .sv-champs{display:grid;grid-template-columns:1fr 1fr;gap:22px 26px}
+  .sv-f{display:flex;flex-direction:column}
+  .sv-f--large{grid-column:1/-1}
+  .sv-f label{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--sv-terre);font-weight:600;margin-bottom:8px}
+  .sv-f input,.sv-f select,.sv-f textarea{font-family:'Outfit',sans-serif;font-size:15px;color:var(--sv-encre);background:var(--sv-ivoire);border:1px solid rgba(31,29,26,.2);border-radius:2px;padding:12px 13px;width:100%;transition:border-color .2s}
+  .sv-f textarea{min-height:104px;resize:vertical;line-height:1.6}
+  .sv-f input:focus,.sv-f select:focus,.sv-f textarea:focus{outline:none;border-color:var(--sv-terre)}
+  .sv-f .sv-aide{font-size:13px;color:var(--sv-doux);margin-top:6px;line-height:1.5}
+  .sv-envoi{margin-top:34px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .sv-envoi .sv-note{font-size:13px;color:var(--sv-doux);line-height:1.6;max-width:360px}
+  .sv-form button{font-family:'Outfit',sans-serif;cursor:pointer;border:none}
+
+  .sv-bande{position:relative;min-height:44vh;display:flex;align-items:center;padding:80px 0;background:url('/assets/amenagement/seve-institut.jpg') center 38%/cover no-repeat}
+  .sv-bande::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(31,29,26,.78) 0%,rgba(31,29,26,.5) 58%,rgba(31,29,26,.22) 100%)}
+  .sv-bande .sv-wrap{position:relative;z-index:1}
+  .sv-bande p{font-family:'Playfair Display',serif;color:var(--sv-ivoire);font-size:clamp(25px,3.6vw,46px);line-height:1.22;letter-spacing:-.01em;max-width:780px;margin:0}
+  .sv-bande em{font-style:italic;color:#C9D2BC}
+
+  .sv-sec--vert{background:var(--sv-vert);color:var(--sv-ivoire)}
+  .sv-sec--vert .sv-kicker{color:var(--sv-vert-clair)}
+  .sv-sec--vert .sv-gar{border-color:rgba(251,248,243,.3)}
+  .sv-sec--vert .sv-gar h2{color:var(--sv-ivoire)}
+  .sv-sec--vert .sv-gar p{color:rgba(251,248,243,.82)}
+  .sv-sec--vert .sv-gar .sv-ast{border-top-color:rgba(251,248,243,.26);color:rgba(251,248,243,.6)}
+  .sv-sec--vert .sv-gar p strong{color:var(--sv-ivoire)}
+
+  .sv-bud li::before{background:var(--sv-vert-clair)}
+  .sv-th .sv-mat{color:var(--sv-vert)}
+  .sv-liste li::before{color:var(--sv-vert)}
+  .sv-f input:focus,.sv-f select:focus,.sv-f textarea:focus{border-color:var(--sv-vert)}
+  .sv-sticky{background:var(--sv-vert)}
+  .sv-autre{display:none}
+  .sv-autre.sv-on{display:flex}
+
+  .sv-echelle{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+  .sv-niv figure{margin:0;overflow:hidden;background:var(--sv-sable);aspect-ratio:4/5}
+  .sv-niv figure img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+  .sv-niv:hover figure img{transform:scale(1.035)}
+  .sv-niv .sv-nom{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-top:11px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .sv-niv .sv-nom span{letter-spacing:.02em;text-transform:none;font-weight:400;color:var(--sv-doux);white-space:nowrap}
+  .sv-metier{padding:40px 0;border-top:1px solid rgba(31,29,26,.14)}
+  .sv-metier:first-of-type{border-top:none;padding-top:0}
+  .sv-metier .sv-mat{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sv-vert);font-weight:600;margin-bottom:9px}
+  .sv-metier h3{font-size:26px;margin-bottom:12px;letter-spacing:-.01em}
+  .sv-metier > p{font-size:16px;line-height:1.8;color:var(--sv-doux);margin:0;max-width:720px}
+  .sv-sticky{display:none}
+
+  @media(max-width:980px){
+    .sv-trio,.sv-etapes,.sv-prix{grid-template-columns:1fr}
+    .sv-regles{grid-template-columns:1fr;gap:0}
+    .sv-duo{grid-template-columns:1fr}
+    .sv-sec{padding:64px 0}
+    .sv-hero{min-height:auto;background-position:70% center}
+    .sv-hero::after{background:linear-gradient(180deg,rgba(251,248,243,.92) 0%,rgba(251,248,243,.78) 60%,rgba(251,248,243,.9) 100%)}
+    .sv-btn--ligne{margin:10px 0 0;display:block;text-align:center}
+    .sv-btn--plein{display:block;text-align:center}
+    .sv-miroir,.sv-buds{grid-template-columns:1fr}
+    .sv-livre{grid-template-columns:1fr;gap:34px}
+    .sv-etapes{grid-template-columns:1fr}
+    .sv-gar{padding:30px 24px}
+    .sv-champs{grid-template-columns:1fr}
+    .sv-bande{padding:56px 0;min-height:auto}
+    .sv-echelle{grid-template-columns:1fr 1fr;gap:12px}
+    .sv-niv .sv-nom{flex-direction:column;gap:2px;font-size:11px}
+    .sv-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--sv-encre);padding:12px 16px;box-shadow:0 -2px 18px rgba(31,29,26,.18)}
+    .sv-sticky a{display:block;text-align:center;color:var(--sv-ivoire);text-decoration:none;font-size:15px;letter-spacing:.04em;font-weight:500;padding:4px}
+    .sv-fin{padding-bottom:140px}
+  }
+</style>
+</head>
+<body>
+
+<!-- tn:header -->
+<div class="tn-banner" id="tn-banner" data-aud="client">
+  <p>Réponse sous 24 à 48 h ouvrées · Sans bail commercial · <a href="tel:0759647754">07 59 64 77 54</a></p>
+  <button type="button" class="tn-banner__close" aria-label="Fermer le bandeau">×</button>
+</div>
+<header class="tn-header">
+<div class="tn-header__inner">
+  <a class="tn-logo" href="https://www.strakara.fr/index.html" aria-label="STRAKARA, accueil">STRA<span>KARA</span></a>
+  <nav class="tn-nav" aria-label="Navigation principale">
+    <a href="https://www.strakara.fr/espaces.html">Trouver un espace</a>
+    <a href="https://www.strakara.fr/modele-stockage-professionnel.html">Comment ça marche</a>
+    <a href="https://www.strakara.fr/devenir-hebergeur-stockage.html">Devenir hébergeur</a>
+    <a href="https://www.strakara.fr/outils.html">Outils</a>
+    <a href="https://www.strakara.fr/blog/index.html">Blog</a>
+    <a href="https://www.strakara.fr/contact.html">Contact</a>
+  </nav>
+  <div class="tn-actions">
+    <a class="tn-phone" href="tel:0759647754">07 59 64 77 54</a>
+    <a class="tn-login" href="https://www.strakara.fr/login-client.html">Connexion</a>
+    <a class="tn-cta" href="https://www.strakara.fr/espaces.html">Voir les espaces</a>
+  </div>
+  <button type="button" class="tn-burger" id="tn-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="tn-mobile"><span></span><span></span><span></span></button>
+</div>
+<nav class="tn-mobile" id="tn-mobile" aria-label="Menu mobile">
+  <a href="https://www.strakara.fr/espaces.html">Trouver un espace</a>
+  <a href="https://www.strakara.fr/modele-stockage-professionnel.html">Comment ça marche</a>
+  <a href="https://www.strakara.fr/devenir-hebergeur-stockage.html">Devenir hébergeur</a>
+  <a href="https://www.strakara.fr/outils.html">Outils</a>
+  <a href="https://www.strakara.fr/blog/index.html">Blog</a>
+  <a href="https://www.strakara.fr/contact.html">Contact</a>
+  <a href="tel:0759647754">07 59 64 77 54</a>
+  <div class="tn-mobile__btns">
+    <a class="tn-login" href="https://www.strakara.fr/login-client.html">Connexion</a>
+    <a class="tn-cta" href="https://www.strakara.fr/espaces.html">Voir les espaces</a>
+  </div>
+</nav>
+</header>
+<script src="/assets/js/tunnel.js" defer></script>
+<!-- /tn:header -->
+
+<div class="sv">
+
+<header class="sv-hero">
+  <div class="sv-wrap"><div class="sv-hero-in">
+    <div class="sv-kicker">Sève — par STRAKARA</div>
+    <h1>Voyez votre local <em>avant</em> de dépenser.</h1>
+    <p>Transformer un institut de 40 m², c'est souvent 4 000 à 9 000 €. Encore faut-il savoir où les mettre. On vous montre à quoi ressemblera votre espace, ce que chaque poste coûte, et quels artisans le feront.</p>
+    <a class="sv-btn sv-btn--plein" href="#questionnaire" data-umami-event="seve-cta-questionnaire">Vingt minutes au téléphone, gratuit</a><a class="sv-btn sv-btn--ligne" href="tel:0759647754" data-umami-event="seve-tel">07 59 64 77 54</a>
+    <div class="sv-resume">Quelques questions, vos coordonnées, et on vous rappelle sous 48 heures. Sans engagement.</div>
+  </div></div>
+</header>
+
+<section class="sv-sec">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">Là où vous en êtes</div>
+      <h2>Vous savez que ça ne va pas. Vous ne savez pas par quoi commencer.</h2>
+    </div>
+    <div class="sv-miroir">
+      <div class="sv-mir"><strong>Votre local fonctionne, mais il ne vous ressemble pas.</strong><p>Les murs sont ceux du précédent occupant, l'éclairage est celui du bailleur, et vous avez appris à ne plus les voir. Vos clientes, elles, les voient.</p></div>
+      <div class="sv-mir"><strong>Vous savez ce que vous n'aimez pas.</strong><p>Pas ce qu'il faut mettre à la place. Vous enregistrez des photos depuis des mois sans arriver à en faire un projet.</p></div>
+      <div class="sv-mir"><strong>Un architecte, c'est 3 000 à 8 000 € et trois mois.</strong><p>Pour un espace de 40 m², c'est hors de proportion. Alors vous repoussez, et le local reste comme il est.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sv-bande">
+  <div class="sv-wrap">
+    <p>Le vrai risque n'est pas de dépenser.<br>C'est de dépenser <em>et de ne pas aimer.</em></p>
+  </div>
+</section>
+
+<section class="sv-sec sv-sec--sable" id="budgets">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">Ce que ça coûte vraiment</div>
+      <h2>Trois niveaux, trois budgets. On part du vôtre.</h2>
+      <p>Personne ne publie ces chiffres. Nous si. Les fourchettes ci-dessous sont des <strong>estimations de budget travaux</strong> relevées sur le marché français en 2026 — seul l'artisan établit un devis.</p>
+    </div>
+    <div class="sv-buds">
+      <div class="sv-bud">
+        <figure><img src="/assets/amenagement/seve-budget-essentiel.jpg" alt="Projection d'un institut au niveau Essentiel — murs repeints, éclairage chaud, plantes, sol existant conservé" loading="lazy" width="1000" height="1250"></figure>
+        <h3>Essentiel</h3>
+        <div class="sv-m2">100 € <span>/ m²</span></div>
+        <div class="sv-ex">Soit environ 4 000 € pour 40 m²</div>
+        <ul>
+          <li>Peinture des murs</li>
+          <li>Éclairage chaud, points lumineux repensés</li>
+          <li>Plantes et jardinières</li>
+          <li>Rideaux, voilages, stores</li>
+          <li>Une belle pièce à l'accueil</li>
+          <li>Rien à démolir, et une partie se fait soi-même</li>
+        </ul>
+      </div>
+      <div class="sv-bud">
+        <figure><img src="/assets/amenagement/seve-budget-complet.jpg" alt="Projection du même institut au niveau Complet — sol refait, étagères en chêne, appliques laiton" loading="lazy" width="1000" height="1250"></figure>
+        <h3>Complet</h3>
+        <div class="sv-m2">230 € <span>/ m²</span></div>
+        <div class="sv-ex">Soit environ 9 000 € pour 40 m²</div>
+        <ul>
+          <li>Tout l'Essentiel</li>
+          <li>Sol refait</li>
+          <li>Étagères et rangements sur mesure</li>
+          <li>Reprise de la vitrine</li>
+          <li>Le niveau le plus souvent retenu</li>
+        </ul>
+      </div>
+      <div class="sv-bud sv-bud--haut">
+        <figure><img src="/assets/amenagement/seve-budget-signature.jpg" alt="Projection du même institut au niveau Signature — menuiserie sur mesure, tasseaux de chêne, éclairage scénographique" loading="lazy" width="1000" height="1250"></figure>
+        <h3>Signature</h3>
+        <div class="sv-m2">550 € <span>/ m²</span></div>
+        <div class="sv-ex">Soit environ 22 000 € pour 40 m²</div>
+        <ul>
+          <li>Menuiserie entièrement sur mesure</li>
+          <li>Cloisons, plafond, habillage mural bois</li>
+          <li>Éclairage scénographique</li>
+          <li>Comptoir d'accueil dessiné pour vous</li>
+          <li>Le niveau des grands visuels de cette page</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sv-options">Sous 25 m², compter un minimum d'environ <strong>2 500 €</strong> : un comptoir coûte le même prix dans 20 m² que dans 60.<br>Et vous n'êtes pas obligée de tout faire d'un coup — l'étude vous dit quoi faire <strong>en premier</strong>.<br>Sur un budget serré, nous orientons volontiers vers <strong>Clairière</strong> : les bois blonds sont la famille la moins chère, l'ambiance la plus lumineuse, et le résultat le plus spectaculaire pour l'argent dépensé.</p>
+  </div>
+</section>
+
+<section class="sv-sec">
+  <div class="sv-wrap">
+    <div class="sv-livre">
+      <div>
+        <div class="sv-tete" style="margin-bottom:30px">
+          <div class="sv-kicker">Ce que vous recevez</div>
+          <h2>Un projet complet, pas une planche d'ambiance.</h2>
+        </div>
+        <ul class="sv-liste">
+          <li><strong>Deux à quatre visuels de votre espace</strong> selon le forfait, dans l'ambiance choisie, pris depuis les angles qui comptent — l'entrée, le fond, le poste de travail.</li>
+          <li><strong>La liste des matériaux</strong>, référence par référence : peintures et leurs teintes, bois, sols, textiles.</li>
+          <li><strong>Le plan d'éclairage</strong> : où placer chaque point lumineux, et en quelle température de blanc.</li>
+          <li><strong>Le budget poste par poste</strong>, avec ce que vous pouvez faire vous-même et ce qui demande un artisan.</li>
+          <li><strong>Le projet découpé en trois phases</strong> : ce qui change tout, ce qui approfondit, ce qui finit. Les visuels montrent le projet terminé ; les phases n'en découpent que le budget et l'ordre des travaux.</li>
+          <li><strong>Trois artisans de votre secteur</strong>, vérifiés, prêts à chiffrer votre projet. Ils établissent leurs devis après l'étude, directement avec vous.</li>
+        </ul>
+      </div>
+      <div class="sv-cadre sv-cadre--pdf">
+        <figure><img src="/assets/amenagement/seve-pdf-apercu.jpg" alt="Première page de l'exemple d'étude" loading="lazy" width="760" height="1075"></figure>
+        <h3>Vous préférez voir avant d'appeler ?</h3>
+        <p>Téléchargez l'exemple d'étude complet : un institut de 42 m² en ambiance Clairière, neuf pages, avec ses visuels, sa liste de matériaux, son plan d'éclairage et son budget poste par poste. C'est exactement ce que vous recevrez.</p>
+        <p style="margin-top:20px"><a class="sv-btn sv-btn--plein" href="/assets/amenagement/seve-exemple-etude.pdf" download data-umami-event="seve-pdf">Télécharger l&rsquo;exemple · PDF</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec sv-sec--sable" id="ambiances">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">Trois ambiances</div>
+      <h2>On ne décore pas. On installe une atmosphère.</h2>
+      <p>Trois univers, un même soin du détail. Vous choisissez celui qui vous ressemble, on l'adapte à votre espace, à votre métier et à votre budget.</p>
+    </div>
+    <div class="sv-trio">
+      <div class="sv-th"><figure><img src="/assets/amenagement/seve-clairiere.jpg" alt="Ambiance Clairière — enduit crème, chêne blond, lin et terre cuite" loading="lazy" width="1200" height="1499"></figure>
+        <h3>Clairière</h3><div class="sv-mat">Chêne blond · Lin · Terre cuite</div>
+        <p>Clair, aéré, lumineux. Pour les instituts, les boutiques et les bureaux : les espaces qui doivent respirer et paraître plus grands.</p></div>
+      <div class="sv-th"><figure><img src="/assets/amenagement/seve-canopee.jpg" alt="Ambiance Canopée — vert forêt, noyer, laiton et plantes" loading="lazy" width="1200" height="1499"></figure>
+        <h3>Canopée</h3><div class="sv-mat">Noyer · Vert forêt · Laiton</div>
+        <p>Profond, enveloppant, fait pour le soir. Pour les restaurants, les bars et les cabinets : les lieux où l'on veut que les gens restent.</p></div>
+      <div class="sv-th"><figure><img src="/assets/amenagement/seve-ecorce.jpg" alt="Ambiance Écorce — béton ciré, bois brut, acier noir et verrière" loading="lazy" width="1200" height="1499"></figure>
+        <h3>Écorce</h3><div class="sv-mat">Bois brut · Béton · Acier noir</div>
+        <p>Brut, franc, urbain. Pour les ateliers, les showrooms et les concept stores : les espaces qui assument la matière.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">En situation</div>
+      <h2>La même méthode, trois métiers.</h2>
+      <p>C'est le métier qui dicte le plan, l'ambiance qui donne le caractère, et le budget qui décide jusqu'où on va. Voici le même exercice sur un restaurant et une boutique — l'institut est plus haut.</p>
+    </div>
+
+    <div class="sv-metier">
+      <div class="sv-mat">Institut de beauté · Clairière</div>
+      <h3>Un cocon qui rassure</h3>
+      <p>Enduit à la chaux, rideau de lin, fauteuil bouclé et travertin. La lumière est basse et chaude, les angles sont adoucis. On entre et on se détend avant même de s'asseoir.</p>
+      <div class="sv-duo" style="margin-top:24px">
+        <figure style="margin:0"><img src="/assets/amenagement/seve-institut.jpg" alt="Institut de beauté en ambiance Clairière" loading="lazy" width="1200" height="1499"></figure>
+        <figure style="margin:0"><img src="/assets/amenagement/seve-clairiere.jpg" alt="Détail de l'ambiance Clairière" loading="lazy" width="1200" height="1499"></figure>
+      </div>
+    </div>
+
+    <div class="sv-metier">
+      <div class="sv-mat">Restaurant · Canopée</div>
+      <h3>Une salle où l'on prolonge</h3>
+      <p>Velours vert, noyer, laiton et plantes retombantes. Chaque table a sa lumière. Le vert absorbe le bruit visuel, le laiton réchauffe : on commande un dernier verre sans y penser. D'un budget à l'autre, c'est le sol et la menuiserie qui changent — l'ambiance, elle, tient dès le premier niveau.</p>
+      <div class="sv-echelle">
+        <div class="sv-niv"><figure><img src="/assets/amenagement/seve-resto-essentiel.jpg" alt="Salle de restaurant en ambiance Canopée au niveau Essentiel" loading="lazy" width="900" height="1125"></figure><div class="sv-nom">Essentiel <span>≈ 100 €/m²</span></div></div>
+        <div class="sv-niv"><figure><img src="/assets/amenagement/seve-resto-complet.jpg" alt="Salle de restaurant en ambiance Canopée au niveau Complet" loading="lazy" width="900" height="1125"></figure><div class="sv-nom">Complet <span>≈ 230 €/m²</span></div></div>
+        <div class="sv-niv"><figure><img src="/assets/amenagement/seve-resto-signature.jpg" alt="Salle de restaurant en ambiance Canopée au niveau Signature" loading="lazy" width="900" height="1125"></figure><div class="sv-nom">Signature <span>≈ 550 €/m²</span></div></div>
+      </div>
+    </div>
+
+    <div class="sv-metier">
+      <div class="sv-mat">Boutique · Écorce</div>
+      <h3>Un décor qui s'efface</h3>
+      <p>Verrière noire, béton, bois brut à chant vivant. Les matières sont fortes mais neutres : elles mettent le produit en avant au lieu de lui faire concurrence. Ici encore, la peinture, l'éclairage et une belle table suffisent à tout changer.</p>
+      <div class="sv-echelle">
+        <div class="sv-niv"><figure><img src="/assets/amenagement/seve-shop-essentiel.jpg" alt="Boutique en ambiance Écorce au niveau Essentiel" loading="lazy" width="900" height="1125"></figure><div class="sv-nom">Essentiel <span>≈ 100 €/m²</span></div></div>
+        <div class="sv-niv"><figure><img src="/assets/amenagement/seve-shop-complet.jpg" alt="Boutique en ambiance Écorce au niveau Complet" loading="lazy" width="900" height="1125"></figure><div class="sv-nom">Complet <span>≈ 230 €/m²</span></div></div>
+        <div class="sv-niv"><figure><img src="/assets/amenagement/seve-shop-signature.jpg" alt="Boutique en ambiance Écorce au niveau Signature" loading="lazy" width="900" height="1125"></figure><div class="sv-nom">Signature <span>≈ 550 €/m²</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec sv-sec--sable">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">Notre parti pris</div>
+      <h2>Six règles que nous ne transgressons jamais.</h2>
+      <p>C'est ce qui fait qu'un espace vieillit bien au lieu de se démoder en deux ans.</p>
+    </div>
+    <div class="sv-regles">
+      <div class="sv-regle"><span class="num">01</span><p><strong>Du bois vrai là où on le touche</strong> — le comptoir, une étagère, une poignée. Ailleurs, un décor bois convaincant et mat. Jamais de faux bois brillant, jamais de blanc laqué.</p></div>
+      <div class="sv-regle"><span class="num">02</span><p><strong>Au moins une matière vivante</strong> : plante, lin, terre cuite, pierre. Quelque chose qui vieillit bien.</p></div>
+      <div class="sv-regle"><span class="num">03</span><p><strong>Lumière chaude uniquement.</strong> Jamais de néon blanc. C'est le détail que presque personne ne respecte.</p></div>
+      <div class="sv-regle"><span class="num">04</span><p><strong>Des surfaces mates.</strong> Enduits, bois huilé, céramique sablée. Rien de brillant.</p></div>
+      <div class="sv-regle"><span class="num">05</span><p><strong>Un neutre chaud et une seule couleur.</strong> Jamais trois. C'est la discipline qui fait le calme.</p></div>
+      <div class="sv-regle"><span class="num">06</span><p><strong>Un geste d'artisan visible</strong> par projet : une cannelure, une courbe, une céramique, un détail fait main.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec">
+  <div class="sv-wrap">
+    <div class="sv-tete"><div class="sv-kicker">Comment ça se passe</div><h2>Cinq étapes.<br>Premiers visuels sous 15 jours.</h2></div>
+    <div class="sv-etapes">
+      <div class="sv-etape"><span class="num">01</span><strong>Le questionnaire</strong><p>Quelques questions sur votre local, votre métier et votre budget, et vos photos si vous les avez. Cinq minutes suffisent.</p></div>
+      <div class="sv-etape"><span class="num">02</span><strong>Vingt minutes au téléphone</strong><p>On vous rappelle sous 48 heures, et c'est gratuit. On écoute votre clientèle, vos contraintes, ce que vous aimez et ce que vous ne voulez surtout pas.</p></div>
+      <div class="sv-etape"><span class="num">03</span><strong>L'acompte</strong><p>50 % en ligne pour lancer l'étude, selon le forfait retenu pendant l'appel. Le solde ne se règle qu'à la livraison.</p></div>
+      <div class="sv-etape"><span class="num">04</span><strong>Votre projet</strong><p>Premiers visuels sous 15 jours, en version de lecture. Le solde réglé, vous recevez le dossier complet : matériaux, plan d'éclairage, budget par phase, artisans. Projet complet sous un mois.</p></div>
+      <div class="sv-etape"><span class="num">05</span><strong>Les artisans</strong><p>Ils chiffrent à partir de votre dossier — c'est pour ça qu'ils répondent vite. Ce sont eux qui établissent le devis et réalisent les travaux, et vous restez libre de votre choix.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec sv-sec--vert">
+  <div class="sv-wrap">
+    <div class="sv-gar">
+      <div class="sv-kicker">Nos deux engagements</div>
+      <h2>Vous ne payez le solde<br>qu'une fois les visuels vus.</h2>
+      <p><strong>L'étude se règle en deux fois.</strong> 50 % pour la lancer, 50 % à la livraison. Vous découvrez vos premiers visuels avant de régler le solde — et c'est seulement ensuite que nous vous remettons le dossier complet en haute définition.</p>
+      <p><strong>Si les visuels ne vous parlent pas, on recommence une fois</strong>, sans supplément et sans discussion : nouvelle direction, nouveaux visuels. Un projet qui ne vous ressemble pas ne sert à rien, et nous le savons.</p>
+      <p><strong>Et si nous dépassons le délai annoncé, le solde ne vous est pas facturé.</strong><span style="vertical-align:super;font-size:.72em">&nbsp;*</span> Le délai, c'est notre affaire, pas la vôtre.</p>
+      <p class="sv-ast">* Quinze jours <strong>ouvrés</strong>, week-ends et jours fériés non compris. Le délai court à compter du règlement de l'acompte <strong>et</strong> de la réception de tous les éléments nécessaires à l'étude — photos, dimensions, réponses à nos questions ; s'il en manque un, il est suspendu jusqu'à réception. Il est considéré comme tenu <strong>à l'envoi de notre e-mail vous annonçant que le projet est prêt</strong>, quel que soit le moment où vous en prenez connaissance. Le délai porte sur l'étude elle-même — visuels, matériaux, plan d'éclairage et budget. La mise en relation avec les artisans en fait partie lorsque votre secteur est déjà couvert par notre réseau ; s'il demande une recherche, elle vous est transmise dès que possible et <strong>n'entre pas dans le délai garanti</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec" id="forfaits">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">Le prix de l'étude</div>
+      <h2>On choisit ensemble pendant l'appel.</h2>
+      <p>Tarifs hors taxes, réglés en deux fois : 50 % au lancement, 50 % à la livraison. L'offre de lancement s'applique aux trois premiers projets.</p>
+    </div>
+    <div class="sv-prix">
+      <div class="sv-carte"><h3>Thème express</h3><div class="sv-pour">Une vitrine, une cabine, un espace unique. <strong>Deux visuels.</strong></div>
+        <div class="sv-lancement">Lancement</div><div class="sv-barre">490 €</div><div class="sv-mt">290 €</div><div class="sv-ht">HT · les 3 premiers</div></div>
+      <div class="sv-carte sv-carte--phare"><h3>Thème complet</h3><div class="sv-pour">Un local entier jusqu'à 80 m². <strong>Trois visuels.</strong> Le plus demandé.</div>
+        <div class="sv-lancement">Lancement</div><div class="sv-barre">990 €</div><div class="sv-mt">590 €</div><div class="sv-ht">HT · les 3 premiers</div></div>
+      <div class="sv-carte"><h3>Thème signature</h3><div class="sv-pour">Commerce ou restaurant, de 80 à 150 m². <strong>Quatre visuels.</strong></div>
+        <div class="sv-lancement">Lancement</div><div class="sv-barre">1 690 €</div><div class="sv-mt">990 €</div><div class="sv-ht">HT · les 3 premiers</div></div>
+    </div>
+    <p class="sv-options">Ambiance supplémentaire <strong>+ 290 €</strong> &nbsp;·&nbsp; Angle supplémentaire <strong>+ 90 €</strong> &nbsp;·&nbsp; Premiers visuels sous 7 jours <strong>+ 190 €</strong></p>
+    <div class="sv-compare">
+      Pour comparer : un architecte d'intérieur facture <strong>40 à 80 € par m²</strong> une esquisse de conception sans suivi de chantier, et <strong>90 à 200 € par m²</strong> une mission complète. Sur 40 m², l'esquisse seule représente 1 600 à 3 200 €.<br>
+      Le Thème complet, sur ce même local, revient à <strong>15 € par m²</strong>. Et il coûte moins cher que de refaire un mur peint de la mauvaise couleur.
+    </div>
+  </div>
+</section>
+
+<section class="sv-sec sv-sec--sable">
+  <div class="sv-wrap">
+    <div class="sv-tete"><div class="sv-kicker">Vos questions</div><h2>Ce qu'on nous demande au téléphone.</h2></div>
+    <div class="sv-faq">
+      <details class="sv-q"><summary>Et si je n'aime pas le résultat ?</summary>
+        <p>On recommence une fois, sans supplément : nouvelle direction, nouveaux visuels. Et comme l'étude se règle en deux fois, vous découvrez les premiers visuels avant d'avoir réglé le solde — vous savez donc à quoi vous vous engagez avant de payer la seconde moitié.</p></details>
+      <details class="sv-q"><summary>Pourquoi pas un architecte d'intérieur ?</summary>
+        <p>Parce que ce n'est pas le même produit. Un architecte conçoit, consulte les entreprises et suit le chantier, pour 90 à 200 € par m². Nous livrons uniquement l'étude : ce à quoi ressemblera votre espace, avec quels matériaux, pour quel budget et avec quels artisans. Si votre projet touche à la structure, aux normes d'accessibilité ou demande un dépôt en mairie, il vous faut un architecte, et nous vous le dirons pendant l'appel.</p></details>
+      <details class="sv-q"><summary>Comment se passe le paiement ?</summary>
+        <p>En deux fois. 50 % en ligne pour lancer l'étude, 50 % à la livraison. Les premiers visuels vous sont présentés en version de lecture ; le solde réglé, vous recevez le dossier complet en haute définition, que vous pouvez remettre tel quel à vos artisans. Et si nous dépassons le délai annoncé, le solde n'est pas facturé, dans les conditions précisées plus haut.</p></details>
+      <details class="sv-q"><summary>Les travaux sont-ils compris dans le prix ?</summary>
+        <p>Non. Le prix est celui de l'étude seule. Les budgets travaux indiqués sur cette page sont des estimations relevées sur le marché français en 2026 : seuls les artisans établissent un devis, et c'est avec eux que vous signez. Nous ne chiffrons jamais les travaux à leur place.</p></details>
+      <details class="sv-q"><summary>Je peux garder mon propre artisan ?</summary>
+        <p>Bien sûr. Nous vous proposons trois artisans vérifiés de votre secteur parce que c'est souvent le point de blocage, mais l'étude est à vous : donnez-la à l'artisan que vous voulez, il saura la lire.</p></details>
+      <details class="sv-q"><summary>Et si mon budget est vraiment petit ?</summary>
+        <p>C'est précisément à ça que sert le découpage en trois phases. La peinture, l'éclairage, les plantes et une belle pièce d'accueil transforment un local plus que tout le reste, pour environ 100 € par m². Vous faites cette phase maintenant et le reste quand vous pourrez — mais dans le bon ordre, et sans rien à refaire.</p>
+        <p>Et nous adaptons les matières au budget sans renoncer au caractère : du bois vrai là où la main se pose, un décor bois mat et convaincant sur les grandes surfaces. Une seule étagère en noyer massif fait plus d'effet qu'une pièce entière en faux noyer.</p></details>
+      <details class="sv-q"><summary>Qu'est-ce que vous ne faites pas ?</summary>
+        <p>Les visuels sont des <strong>projections, non contractuelles</strong> : ce ne sont pas des photographies de réalisations, et ils ne valent ni plan d'exécution ni étude technique. Nous n'établissons aucun devis engageant, n'assurons ni la gestion de chantier ni la coordination des artisans, et n'exerçons aucune mission relevant du titre d'architecte. STRAKARA peut percevoir une commission d'apport d'affaires de l'artisan si les travaux sont signés : cela ne change rien au prix de votre étude, et vous restez libre de retenir l'artisan de votre choix.</p></details>
+    </div>
+    <p class="sv-mention">Les visuels présentés sur cette page sont des exemples de projection, réalisés pour illustrer chaque ambiance et chaque niveau de budget. Il ne s'agit pas de photographies de réalisations. Nos <a href="/cgv-seve.html" style="color:var(--sv-encre)">conditions générales de l'étude</a> détaillent l'ensemble de nos engagements.</p>
+  </div>
+</section>
+
+<section class="sv-sec" id="questionnaire">
+  <div class="sv-wrap">
+    <div class="sv-tete">
+      <div class="sv-kicker">Première étape</div>
+      <h2>Cinq minutes, et on vous rappelle.</h2>
+      <p>Ces questions nous servent à arriver préparés : vous ne répéterez rien au téléphone. On vous rappelle sous 48 heures, l'appel dure vingt minutes et il est gratuit.</p>
+    </div>
+    <form id="sv-questionnaire" class="sv-form" novalidate>
+      <p style="display:none"><label>Ne pas remplir <input name="sv-bot" id="sv-bot" autocomplete="off" tabindex="-1"></label></p>
+      <div class="sv-champs">
+
+        <div class="sv-f">
+          <label for="q-activite">Votre activité</label>
+          <select id="q-activite" name="Activité" required>
+            <option value="">Choisissez…</option>
+            <option>Institut de beauté, spa</option>
+            <option>Coiffure, barbier</option>
+            <option>Boutique, commerce</option>
+            <option>Restaurant, bar, café</option>
+            <option>Cabinet, bureau, espace d'accueil</option>
+            <option>Atelier, showroom</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div class="sv-f sv-autre" id="q-autre-bloc">
+          <label for="q-autre">Précisez votre activité</label>
+          <input id="q-autre" name="Activité (précision)" type="text" placeholder="Fleuriste, galerie, cabinet vétérinaire…">
+        </div>
+
+        <div class="sv-f">
+          <label for="q-surface">Surface approximative</label>
+          <select id="q-surface" name="Surface" required>
+            <option value="">Choisissez…</option>
+            <option>Moins de 25 m²</option>
+            <option>25 à 50 m²</option>
+            <option>50 à 80 m²</option>
+            <option>80 à 150 m²</option>
+            <option>Plus de 150 m²</option>
+          </select>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-local">Le local</label>
+          <select id="q-local" name="Situation du local" required>
+            <option value="">Choisissez…</option>
+            <option>En activité, je suis occupant des murs</option>
+            <option>En activité, je suis propriétaire des murs</option>
+            <option>Vide, j'y entre bientôt</option>
+            <option>Je ne l'ai pas encore, je me projette</option>
+          </select>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-budget">Budget travaux envisagé</label>
+          <select id="q-budget" name="Budget travaux" required>
+            <option value="">Choisissez…</option>
+            <option>Moins de 5 000 €</option>
+            <option>5 000 à 10 000 €</option>
+            <option>10 000 à 25 000 €</option>
+            <option>Plus de 25 000 €</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+          <div class="sv-aide">« Je ne sais pas encore » est une réponse parfaitement valable.</div>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-quand">Pour quand</label>
+          <select id="q-quand" name="Échéance" required>
+            <option value="">Choisissez…</option>
+            <option>Dans le mois</option>
+            <option>Dans les trois mois</option>
+            <option>Dans les six mois</option>
+            <option>Je me renseigne pour l'instant</option>
+          </select>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-ambiance">L'ambiance qui vous attire</label>
+          <select id="q-ambiance" name="Ambiance">
+            <option value="">Choisissez…</option>
+            <option>Clairière — chêne blond, lin, terre cuite</option>
+            <option>Canopée — noyer, vert forêt, laiton</option>
+            <option>Écorce — bois brut, béton, acier noir</option>
+            <option>Je ne sais pas, aidez-moi à choisir</option>
+          </select>
+        </div>
+
+        <div class="sv-f sv-f--large">
+          <label for="q-gene">Qu'est-ce qui vous dérange le plus aujourd'hui dans votre espace ?</label>
+          <textarea id="q-gene" name="Ce qui dérange" required placeholder="Dites-le avec vos mots, même en désordre. C'est la question la plus utile du questionnaire."></textarea>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-nom">Prénom et nom</label>
+          <input id="q-nom" name="Nom" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-ville">Ville</label>
+          <input id="q-ville" name="Ville" type="text" autocomplete="address-level2" required>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-tel">Téléphone</label>
+          <input id="q-tel" name="Téléphone" type="tel" autocomplete="tel" required>
+        </div>
+
+        <div class="sv-f">
+          <label for="q-mail">E-mail</label>
+          <input id="q-mail" name="E-mail" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="sv-f sv-f--large">
+          <label for="q-moment">Le meilleur moment pour vous appeler</label>
+          <select id="q-moment" name="Moment de rappel" required>
+            <option value="">Choisissez…</option>
+            <option>En matinée, 9 h – 12 h</option>
+            <option>En début d'après-midi, 12 h – 15 h</option>
+            <option>En fin d'après-midi, 15 h – 18 h</option>
+            <option>En soirée, après 18 h</option>
+            <option>Peu importe</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="sv-envoi">
+        <button type="submit" class="sv-btn sv-btn--plein" data-umami-event="seve-questionnaire-envoye">Envoyer et être rappelée</button>
+        <div class="sv-note" id="sv-form-note">Vos coordonnées servent uniquement à vous rappeler. Pas de newsletter, pas de transmission à des tiers. Détail de vos droits dans notre <a href="https://www.strakara.fr/politique-confidentialite.html" style="color:var(--sv-encre)">politique de confidentialité</a>.</div>
+      </div>
+    </form>
+    <p class="sv-mention">Vous préférez le téléphone tout de suite ? <a href="tel:0759647754" data-umami-event="seve-tel" style="color:var(--sv-encre)">07 59 64 77 54</a>. Vos photos sont les bienvenues par e-mail à <a href="mailto:contact@strakara.fr" style="color:var(--sv-encre)">contact@strakara.fr</a>.</p>
+  </div>
+</section>
+
+<section class="sv-fin">
+  <div class="sv-wrap">
+    <div class="sv-kicker">Trois projets de lancement</div>
+    <h2>Ensuite, les tarifs<br>reviennent à leur niveau.</h2>
+    <p>Cinq minutes de questionnaire, et on vous rappelle sous 48 heures. C'est gratuit, sans engagement, et vous raccrocherez en sachant quelle ambiance va avec votre clientèle et dans quel budget vous êtes.</p>
+    <a class="sv-btn sv-btn--plein" href="#questionnaire" data-umami-event="seve-cta-questionnaire">Répondre au questionnaire</a><a class="sv-btn sv-btn--ligne" href="tel:0759647754" data-umami-event="seve-tel">07 59 64 77 54</a>
+  </div>
+</section>
+
+<div class="sv-sticky"><a href="#questionnaire" data-umami-event="seve-cta-questionnaire">Vingt minutes au téléphone, gratuit →</a></div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  var SB_URL  = 'https://dsckgwjbserojugrhzpp.supabase.co';
+  var SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzY2tnd2pic2Vyb2p1Z3JoenBwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMDg4NTQsImV4cCI6MjA5Nzc4NDg1NH0.6Ry9pJtUO4MdUqVUp0B7M6a544V5aTDpzRDTxOwngXo';
+
+  var form = document.getElementById('sv-questionnaire');
+  if (!form) return;
+  var note = document.getElementById('sv-form-note');
+  var bouton = form.querySelector('button[type=submit]');
+  var noteOrigine = note ? note.innerHTML : '';
+
+  function v(id){ var e = document.getElementById(id); return e ? e.value.trim() : ''; }
+
+  function dire(message, rouge){
+    if (!note) return;
+    note.innerHTML = message;
+    note.style.color = rouge ? '#A4552F' : '';
+  }
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (document.getElementById('sv-bot').value) return;
+
+    var manquant = ['q-activite','q-surface','q-local','q-budget','q-quand',
+                    'q-gene','q-nom','q-ville','q-tel','q-mail','q-moment']
+      .filter(function(id){ return !v(id); });
+    if (manquant.length) {
+      var premier = document.getElementById(manquant[0]);
+      premier.focus(); premier.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      dire('Il reste une réponse à compléter.', true);
+      return;
+    }
+
+    bouton.disabled = true;
+    var texteOrigine = bouton.textContent;
+    bouton.textContent = 'Envoi…';
+    dire(noteOrigine, false);
+
+    var ligne = {
+      nom: v('q-nom'), email: v('q-mail'), telephone: v('q-tel'), ville: v('q-ville'),
+      activite: v('q-activite'), activite_precision: v('q-autre'),
+      surface: v('q-surface'), situation_local: v('q-local'),
+      budget_travaux: v('q-budget'), echeance: v('q-quand'), ambiance: v('q-ambiance'),
+      ce_qui_derange: v('q-gene'), moment_rappel: v('q-moment'),
+      page: window.location.href, user_agent: navigator.userAgent
+    };
+
+    var fini = function(ok){
+      if (ok) {
+        if (window.umami) umami.track('seve-questionnaire-envoye');
+        window.location.href = '/merci-seve.html';
+      } else {
+        bouton.disabled = false;
+        bouton.textContent = texteOrigine;
+        dire("L'envoi n'a pas abouti. Réessayez dans un instant, ou appelez-nous au "
+             + '<a href="tel:0759647754" style="color:inherit">07 59 64 77 54</a>.', true);
+      }
+    };
+
+    try {
+      var sb = window.supabase.createClient(SB_URL, SB_ANON);
+      sb.from('demandes_seve').insert(ligne)
+        .then(function(r){ fini(!(r && r.error)); })
+        .catch(function(){ fini(false); });
+    } catch (e) { fini(false); }
+  });
+})();
+</script>
+<script>
+(function(){
+  var sel=document.getElementById('q-activite'),bloc=document.getElementById('q-autre-bloc'),ch=document.getElementById('q-autre');
+  if(!sel||!bloc||!ch)return;
+  function maj(){var a=sel.value==='Autre';bloc.classList.toggle('sv-on',a);ch.required=a;if(!a)ch.value='';}
+  sel.addEventListener('change',maj);maj();
+})();
+</script>
+
+
+<footer class="tn-footer">
+  <div class="tn-footer__inner">
+  <div class="tn-footer__brand">
+    <a class="tn-logo" href="https://www.strakara.fr/index.html" aria-label="STRAKARA, accueil">STRA<span>KARA</span></a>
+    <p>Espaces professionnels partagés entre entreprises, sans bail commercial. Entrepôts, ateliers, bureaux et stockage partout en France.</p>
+  </div>
+  <div class="tn-footer__cols">
+    <div class="tn-footer__col">
+      <h2>Entreprises</h2>
+      <ul>
+        <li><a href="https://www.strakara.fr/espaces.html">Trouver un espace</a></li>
+        <li><a href="https://www.strakara.fr/recherche-espace.html">Déposer ma recherche</a></li>
+        <li><a href="https://www.strakara.fr/calculateur-surface-stockage.html">Calculateur de surface</a></li>
+        <li><a href="https://www.strakara.fr/checklist-stockage-professionnel.html">Checklist préparation</a></li>
+        <li><a href="https://www.strakara.fr/modele-stockage-professionnel.html">Comment ça marche</a></li>
+      </ul>
+    </div>
+    <div class="tn-footer__col">
+      <h2>Hébergeurs</h2>
+      <ul>
+        <li><a href="https://www.strakara.fr/devenir-hebergeur-stockage.html">Devenir hébergeur</a></li>
+        <li><a href="https://www.strakara.fr/simulateur-revenus-hebergeur.html">Simulateur de revenus</a></li>
+        <li><a href="https://www.strakara.fr/recherches-clients.html">Recherches clients</a></li>
+        <li><a href="https://www.strakara.fr/login-client.html">Espace hébergeur</a></li>
+      </ul>
+    </div>
+    <div class="tn-footer__col">
+      <h2>STRAKARA</h2>
+      <ul>
+        <li><a href="https://www.strakara.fr/a-propos.html">À propos</a></li>
+        <li><a href="https://www.strakara.fr/blog/index.html">Blog</a></li>
+        <li><a href="https://www.strakara.fr/outils.html">Outils</a></li>
+        <li><a href="https://www.strakara.fr/devenir-partenaire-affaires.html">Devenir partenaire</a></li>
+        <li><a href="https://www.strakara.fr/contact.html">Contact</a></li>
+        <li><a href="tel:0759647754">07 59 64 77 54</a></li>
+        <li><a href="mailto:contact@strakara.fr">contact@strakara.fr</a></li>
+      </ul>
+    </div>
+    <div class="tn-footer__col">
+      <h2>Légal</h2>
+      <ul>
+        <li><a href="https://www.strakara.fr/cgv.html">CGV</a></li>
+        <li><a href="https://www.strakara.fr/cgh.html">CGH</a></li>
+        <li><a href="https://www.strakara.fr/cgo.html">CGO</a></li>
+        <li><a href="https://www.strakara.fr/mentions-legales.html">Mentions légales</a></li>
+        <li><a href="https://www.strakara.fr/politique-confidentialite.html">Confidentialité</a></li>
+        <li><a href="https://www.strakara.fr/politique-cookies.html">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="tn-footer__bottom">
+    <p>© 2026 STRAKARA SASU · Tous droits réservés</p>
+    <p class="tn-footer__nocookie"></p>
+  </div>
+  </div>
+</footer>
+<!-- /tn:footer -->
+
+
+<script>
+
+  function skCloseBanner(){
+
+    var banner =
+      (document.getElementById('sk-banner')||document.createElement("div"));
+
+    if(banner){
+      banner.classList.add('sk-hidden');
+    }
+
+    sessionStorage.setItem(
+      'sk-banner-closed',
+      '1'
+    );
+
+  }
+
+
+  if(
+    sessionStorage.getItem(
+      'sk-banner-closed'
+    )
+  ){
+
+    var banner =
+      (document.getElementById('sk-banner')||document.createElement("div"));
+
+    if(banner){
+      banner.classList.add('sk-hidden');
+    }
+
+  }
+
+
+  function skToggleMenu(){
+
+    var menu =
+      document.getElementById(
+        'sk-mobile-menu'
+      );
+
+    if(menu){
+      menu.classList.toggle('sk-open');
+    }
+
+  }
+
+</script>
+</body>
+</html>
